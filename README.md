@@ -2,9 +2,10 @@
 
 > Production‑ready Express.js backend for the EduBot Super App: a unified platform for HKDSE, A‑Level, and GCSE exam preparation.
 
-![License](https://img.shields.io/github/license/AriusKing/edubot-backend)
+![GitHub License](https://img.shields.io/github/license/AriusKing/edubot-backend)
 ![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
 ![Express](https://img.shields.io/badge/express-4.x-blue)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/AriusKing/edubot-backend/node.js.yml?branch=main)
 
 **Live Demo:** [https://edubot-backend.onrender.com](https://edubot-backend.onrender.com) (deploying soon)  
 **Frontend:** [EduBot Frontend](https://github.com/AriusKing/edubot-frontend)  
