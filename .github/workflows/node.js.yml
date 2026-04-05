@@ -1,0 +1,43 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (placeholder)
+        run: echo "Linting step – add ESLint later"
+
+      - name: Verify server starts
+        run: |
+          timeout 10 npm start &
+          sleep 5
+          curl -f http://localhost:3000/api/health || exit 1
+          kill %1
+
+      - name: Run tests (placeholder)
+        run: echo "Test suite – add Jest later"
+
+      - name: Build (placeholder)
+        run: echo "Build step – optional"

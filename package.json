@@ -1,0 +1,35 @@
+{
+  "name": "edubot-super-app-backend",
+  "version": "1.0.0",
+  "description": "Unified backend for EduBot Super App - combines Desktop GPIA, Workspace EduBot, and Portable AI Tutor",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "init-db": "node -e \"const { initDatabase } = require('./db/init'); initDatabase().then(() => console.log('Database initialized')).catch(console.error);\"",
+    "migrate-questions": "node scripts/migrateQuestions.js",
+    "scan-papers": "node scripts/scanPapers.js"
+  },
+  "keywords": [
+    "edubot",
+    "education",
+    "tutoring",
+    "hkdse",
+    "a-level",
+    "gcse",
+    "exam-prep"
+  ],
+  "author": "EduBot Team",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^9.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
